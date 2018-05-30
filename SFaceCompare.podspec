@@ -83,6 +83,8 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/BohdanNikoletti/SFaceCompare.git", :tag => "#{s.version}" }
 
+  s.framework = "UIKit"
+  s.dependency 'OpenCV'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
