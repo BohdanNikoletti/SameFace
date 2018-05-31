@@ -5,7 +5,7 @@ DEPENDENCIES:
   - OpenCV
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - OpenCV
 
 SPEC CHECKSUMS:
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 73aebd2c19a339c0618ef859f86fb47a1db15e7c
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
