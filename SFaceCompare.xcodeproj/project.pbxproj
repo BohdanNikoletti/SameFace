@@ -23,6 +23,10 @@
 		A97AFB0B20BFD976008330DC /* face.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB0920BFD976008330DC /* face.cpp */; };
 		A97AFB0C20BFD976008330DC /* face.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A97AFB0A20BFD976008330DC /* face.hpp */; };
 		A97AFB0E20BFDDAB008330DC /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFB0D20BFDDAA008330DC /* CoreImage.framework */; };
+		A97AFB1320BFED3D008330DC /* shape_predictor_68_face_landmarks.xml in Resources */ = {isa = PBXBuildFile; fileRef = A97AFB1020BFED3D008330DC /* shape_predictor_68_face_landmarks.xml */; };
+		A97AFB1420BFED3D008330DC /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */; };
+		A97AFB1520BFED3D008330DC /* OpenFace.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1220BFED3D008330DC /* OpenFace.mlmodel */; };
+		A97AFB1720C01A05008330DC /* CVUtilsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */; };
 		BE94153BC88049A7C56675D3 /* Pods_SFaceCompareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C672DC171F884446E1E3FD9E /* Pods_SFaceCompareTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +64,11 @@
 		A97AFB0920BFD976008330DC /* face.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = face.cpp; sourceTree = "<group>"; };
 		A97AFB0A20BFD976008330DC /* face.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = face.hpp; sourceTree = "<group>"; };
 		A97AFB0D20BFDDAA008330DC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		A97AFB1020BFED3D008330DC /* shape_predictor_68_face_landmarks.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = shape_predictor_68_face_landmarks.xml; sourceTree = "<group>"; };
+		A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		A97AFB1220BFED3D008330DC /* OpenFace.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = OpenFace.mlmodel; sourceTree = "<group>"; };
+		A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVUtilsInterface.swift; sourceTree = "<group>"; };
+		A97AFB1820C01F3D008330DC /* sface-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sface-Bridging-Header.h"; sourceTree = "<group>"; };
 		C672DC171F884446E1E3FD9E /* Pods_SFaceCompareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFaceCompareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEEA5D475A3CA48786B4AD9 /* Pods-SFaceCompareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompareTests/Pods-SFaceCompareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E17C2356EC6E46C467D059 /* Pods-SFaceCompareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompareTests/Pods-SFaceCompareTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +134,7 @@
 		40D23E1D20B98B24002E6479 /* SFaceCompare */ = {
 			isa = PBXGroup;
 			children = (
+				A97AFB1820C01F3D008330DC /* sface-Bridging-Header.h */,
 				A97AFAEB20BFBDD9008330DC /* CVUtils */,
 				40D23E1E20B98B24002E6479 /* SFaceCompare.h */,
 				40D23E1F20B98B24002E6479 /* Info.plist */,
@@ -163,10 +173,12 @@
 		A97AFAEB20BFBDD9008330DC /* CVUtils */ = {
 			isa = PBXGroup;
 			children = (
+				A97AFB0F20BFED08008330DC /* ml_models */,
 				A97AFB0420BFD881008330DC /* general */,
 				A97AFAF520BFC065008330DC /* converters */,
 				A97AFAF120BFC007008330DC /* OpenCVWrapper.h */,
 				A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */,
+				A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */,
 			);
 			path = CVUtils;
 			sourceTree = "<group>";
@@ -191,6 +203,16 @@
 				A97AFB0A20BFD976008330DC /* face.hpp */,
 			);
 			path = general;
+			sourceTree = "<group>";
+		};
+		A97AFB0F20BFED08008330DC /* ml_models */ = {
+			isa = PBXGroup;
+			children = (
+				A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */,
+				A97AFB1220BFED3D008330DC /* OpenFace.mlmodel */,
+				A97AFB1020BFED3D008330DC /* shape_predictor_68_face_landmarks.xml */,
+			);
+			path = ml_models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +282,7 @@
 				TargetAttributes = {
 					40D23E1A20B98B24002E6479 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 					40D23E2320B98B24002E6479 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -289,6 +312,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97AFB1420BFED3D008330DC /* haarcascade_frontalface_alt.xml in Resources */,
+				A97AFB1320BFED3D008330DC /* shape_predictor_68_face_landmarks.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +374,9 @@
 				A97AFB0120BFD3DB008330DC /* source.cpp in Sources */,
 				A97AFB0B20BFD976008330DC /* face.cpp in Sources */,
 				A97AFAFF20BFD01E008330DC /* UIImage_CVMat.mm in Sources */,
+				A97AFB1720C01A05008330DC /* CVUtilsInterface.swift in Sources */,
 				A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */,
+				A97AFB1520BFED3D008330DC /* OpenFace.mlmodel in Sources */,
 				A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +525,7 @@
 			baseConfigurationReference = 57EB02AB45B571AB2874FE36 /* Pods-SFaceCompare.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -530,6 +558,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompare;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SFaceCompare/sface-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -541,6 +571,7 @@
 			baseConfigurationReference = 619AC758A5D491AA32B6C853 /* Pods-SFaceCompare.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -574,6 +605,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompare;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SFaceCompare/sface-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -584,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CBEEA5D475A3CA48786B4AD9 /* Pods-SFaceCompareTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49UXR3JGK2;
 				INFOPLIST_FILE = SFaceCompareTests/Info.plist;
@@ -603,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1E17C2356EC6E46C467D059 /* Pods-SFaceCompareTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49UXR3JGK2;
 				INFOPLIST_FILE = SFaceCompareTests/Info.plist;
