@@ -12,6 +12,17 @@
 		40D23E2C20B98B24002E6479 /* SFaceCompare.h in Headers */ = {isa = PBXBuildFile; fileRef = 40D23E1E20B98B24002E6479 /* SFaceCompare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81BA7DDBA561198FAFBAD399 /* Pods_SFaceCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66212E4A96D0206E66EC9A29 /* Pods_SFaceCompare.framework */; };
 		A97AFAEA20BFBBA4008330DC /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFAE920BFBBA4008330DC /* libdlib.a */; };
+		A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAF120BFC007008330DC /* OpenCVWrapper.h */; };
+		A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */; };
+		A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAFA20BFCF72008330DC /* CIImage_CVMat.mm */; };
+		A97AFAFF20BFD01E008330DC /* UIImage_CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAFE20BFD01E008330DC /* UIImage_CVMat.mm */; };
+		A97AFB0120BFD3DB008330DC /* source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB0020BFD3DB008330DC /* source.cpp */; };
+		A97AFB0320BFD4FF008330DC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFB0220BFD4FE008330DC /* Accelerate.framework */; };
+		A97AFB0720BFD901008330DC /* general.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB0520BFD901008330DC /* general.cpp */; };
+		A97AFB0820BFD901008330DC /* general.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A97AFB0620BFD901008330DC /* general.hpp */; };
+		A97AFB0B20BFD976008330DC /* face.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB0920BFD976008330DC /* face.cpp */; };
+		A97AFB0C20BFD976008330DC /* face.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A97AFB0A20BFD976008330DC /* face.hpp */; };
+		A97AFB0E20BFDDAB008330DC /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFB0D20BFDDAA008330DC /* CoreImage.framework */; };
 		BE94153BC88049A7C56675D3 /* Pods_SFaceCompareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C672DC171F884446E1E3FD9E /* Pods_SFaceCompareTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +47,19 @@
 		619AC758A5D491AA32B6C853 /* Pods-SFaceCompare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompare.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompare/Pods-SFaceCompare.release.xcconfig"; sourceTree = "<group>"; };
 		66212E4A96D0206E66EC9A29 /* Pods_SFaceCompare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFaceCompare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97AFAE920BFBBA4008330DC /* libdlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdlib.a; sourceTree = "<group>"; };
+		A97AFAF120BFC007008330DC /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		A97AFAFA20BFCF72008330DC /* CIImage_CVMat.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CIImage_CVMat.mm; sourceTree = "<group>"; };
+		A97AFAFC20BFCF86008330DC /* CIImage_CVMat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIImage_CVMat.h; sourceTree = "<group>"; };
+		A97AFAFD20BFD012008330DC /* UIImage_CVMat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImage_CVMat.h; sourceTree = "<group>"; };
+		A97AFAFE20BFD01E008330DC /* UIImage_CVMat.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UIImage_CVMat.mm; sourceTree = "<group>"; };
+		A97AFB0020BFD3DB008330DC /* source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = source.cpp; path = lib/dlib/all/source.cpp; sourceTree = "<group>"; };
+		A97AFB0220BFD4FE008330DC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A97AFB0520BFD901008330DC /* general.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = general.cpp; sourceTree = "<group>"; };
+		A97AFB0620BFD901008330DC /* general.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = general.hpp; sourceTree = "<group>"; };
+		A97AFB0920BFD976008330DC /* face.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = face.cpp; sourceTree = "<group>"; };
+		A97AFB0A20BFD976008330DC /* face.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = face.hpp; sourceTree = "<group>"; };
+		A97AFB0D20BFDDAA008330DC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		C672DC171F884446E1E3FD9E /* Pods_SFaceCompareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFaceCompareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEEA5D475A3CA48786B4AD9 /* Pods-SFaceCompareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompareTests/Pods-SFaceCompareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E17C2356EC6E46C467D059 /* Pods-SFaceCompareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompareTests/Pods-SFaceCompareTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97AFB0E20BFDDAB008330DC /* CoreImage.framework in Frameworks */,
+				A97AFB0320BFD4FF008330DC /* Accelerate.framework in Frameworks */,
 				A97AFAEA20BFBBA4008330DC /* libdlib.a in Frameworks */,
 				81BA7DDBA561198FAFBAD399 /* Pods_SFaceCompare.framework in Frameworks */,
 			);
@@ -66,6 +92,8 @@
 		3E630ED4602C616234AC8A01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A97AFB0D20BFDDAA008330DC /* CoreImage.framework */,
+				A97AFB0220BFD4FE008330DC /* Accelerate.framework */,
 				66212E4A96D0206E66EC9A29 /* Pods_SFaceCompare.framework */,
 				C672DC171F884446E1E3FD9E /* Pods_SFaceCompareTests.framework */,
 			);
@@ -75,6 +103,7 @@
 		40D23E1120B98B24002E6479 = {
 			isa = PBXGroup;
 			children = (
+				A97AFB0020BFD3DB008330DC /* source.cpp */,
 				A97AFAE820BFBB50008330DC /* lib */,
 				40D23E1D20B98B24002E6479 /* SFaceCompare */,
 				40D23E2820B98B24002E6479 /* SFaceCompareTests */,
@@ -96,6 +125,7 @@
 		40D23E1D20B98B24002E6479 /* SFaceCompare */ = {
 			isa = PBXGroup;
 			children = (
+				A97AFAEB20BFBDD9008330DC /* CVUtils */,
 				40D23E1E20B98B24002E6479 /* SFaceCompare.h */,
 				40D23E1F20B98B24002E6479 /* Info.plist */,
 			);
@@ -130,6 +160,39 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		A97AFAEB20BFBDD9008330DC /* CVUtils */ = {
+			isa = PBXGroup;
+			children = (
+				A97AFB0420BFD881008330DC /* general */,
+				A97AFAF520BFC065008330DC /* converters */,
+				A97AFAF120BFC007008330DC /* OpenCVWrapper.h */,
+				A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */,
+			);
+			path = CVUtils;
+			sourceTree = "<group>";
+		};
+		A97AFAF520BFC065008330DC /* converters */ = {
+			isa = PBXGroup;
+			children = (
+				A97AFAFC20BFCF86008330DC /* CIImage_CVMat.h */,
+				A97AFAFA20BFCF72008330DC /* CIImage_CVMat.mm */,
+				A97AFAFD20BFD012008330DC /* UIImage_CVMat.h */,
+				A97AFAFE20BFD01E008330DC /* UIImage_CVMat.mm */,
+			);
+			path = converters;
+			sourceTree = "<group>";
+		};
+		A97AFB0420BFD881008330DC /* general */ = {
+			isa = PBXGroup;
+			children = (
+				A97AFB0520BFD901008330DC /* general.cpp */,
+				A97AFB0620BFD901008330DC /* general.hpp */,
+				A97AFB0920BFD976008330DC /* face.cpp */,
+				A97AFB0A20BFD976008330DC /* face.hpp */,
+			);
+			path = general;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -138,6 +201,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				40D23E2C20B98B24002E6479 /* SFaceCompare.h in Headers */,
+				A97AFB0C20BFD976008330DC /* face.hpp in Headers */,
+				A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */,
+				A97AFB0820BFD901008330DC /* general.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +345,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97AFB0720BFD901008330DC /* general.cpp in Sources */,
+				A97AFB0120BFD3DB008330DC /* source.cpp in Sources */,
+				A97AFB0B20BFD976008330DC /* face.cpp in Sources */,
+				A97AFAFF20BFD01E008330DC /* UIImage_CVMat.mm in Sources */,
+				A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */,
+				A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57EB02AB45B571AB2874FE36 /* Pods-SFaceCompare.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -432,6 +505,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					DLIB_JPEG_STATIC,
+					DLIB_NO_GUI_SUPPORT,
+					DLIB_JPEG_SUPPORT,
+					NDEBUG,
+					DLIB_USE_BLAS,
+					DLIB_USE_LAPACK,
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				INFOPLIST_FILE = SFaceCompare/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -448,6 +532,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -455,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 619AC758A5D491AA32B6C853 /* Pods-SFaceCompare.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -462,6 +548,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					DLIB_JPEG_STATIC,
+					DLIB_NO_GUI_SUPPORT,
+					DLIB_JPEG_SUPPORT,
+					NDEBUG,
+					DLIB_USE_BLAS,
+					DLIB_USE_LAPACK,
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				INFOPLIST_FILE = SFaceCompare/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,11 +570,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompare;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
