@@ -10,9 +10,15 @@
 		40D23E2520B98B24002E6479 /* SFaceCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D23E1B20B98B24002E6479 /* SFaceCompare.framework */; };
 		40D23E2A20B98B24002E6479 /* SFaceCompareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23E2920B98B24002E6479 /* SFaceCompareTests.swift */; };
 		40D23E2C20B98B24002E6479 /* SFaceCompare.h in Headers */ = {isa = PBXBuildFile; fileRef = 40D23E1E20B98B24002E6479 /* SFaceCompare.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40D6298F20C42ABE009855CE /* CIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFC20BFCF86008330DC /* CIImage_CVMat.h */; };
+		40D6299020C42AC0009855CE /* UIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFD20BFD012008330DC /* UIImage_CVMat.h */; };
+		40D6299320C48550009855CE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299220C48550009855CE /* Logger.swift */; };
+		40D6299520C48577009855CE /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299420C48577009855CE /* UIImage+.swift */; };
+		40D6299720C48632009855CE /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299620C48632009855CE /* Date+.swift */; };
+		40D6299920C48652009855CE /* Formatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299820C48652009855CE /* Formatter+.swift */; };
 		81BA7DDBA561198FAFBAD399 /* Pods_SFaceCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66212E4A96D0206E66EC9A29 /* Pods_SFaceCompare.framework */; };
 		A97AFAEA20BFBBA4008330DC /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFAE920BFBBA4008330DC /* libdlib.a */; };
-		A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAF120BFC007008330DC /* OpenCVWrapper.h */; };
+		A97AFAF320BFC007008330DC /* OpenCVWrapper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAF120BFC007008330DC /* OpenCVWrapper.hpp */; };
 		A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */; };
 		A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAFA20BFCF72008330DC /* CIImage_CVMat.mm */; };
 		A97AFAFF20BFD01E008330DC /* UIImage_CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAFE20BFD01E008330DC /* UIImage_CVMat.mm */; };
@@ -47,11 +53,16 @@
 		40D23E2420B98B24002E6479 /* SFaceCompareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFaceCompareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D23E2920B98B24002E6479 /* SFaceCompareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFaceCompareTests.swift; sourceTree = "<group>"; };
 		40D23E2B20B98B24002E6479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40D6298B20C4245F009855CE /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		40D6299220C48550009855CE /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		40D6299420C48577009855CE /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		40D6299620C48632009855CE /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		40D6299820C48652009855CE /* Formatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+.swift"; sourceTree = "<group>"; };
 		57EB02AB45B571AB2874FE36 /* Pods-SFaceCompare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompare/Pods-SFaceCompare.debug.xcconfig"; sourceTree = "<group>"; };
 		619AC758A5D491AA32B6C853 /* Pods-SFaceCompare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompare.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompare/Pods-SFaceCompare.release.xcconfig"; sourceTree = "<group>"; };
 		66212E4A96D0206E66EC9A29 /* Pods_SFaceCompare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFaceCompare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97AFAE920BFBBA4008330DC /* libdlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdlib.a; sourceTree = "<group>"; };
-		A97AFAF120BFC007008330DC /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		A97AFAF120BFC007008330DC /* OpenCVWrapper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OpenCVWrapper.hpp; sourceTree = "<group>"; };
 		A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		A97AFAFA20BFCF72008330DC /* CIImage_CVMat.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CIImage_CVMat.mm; sourceTree = "<group>"; };
 		A97AFAFC20BFCF86008330DC /* CIImage_CVMat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIImage_CVMat.h; sourceTree = "<group>"; };
@@ -68,7 +79,6 @@
 		A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
 		A97AFB1220BFED3D008330DC /* OpenFace.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = OpenFace.mlmodel; sourceTree = "<group>"; };
 		A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVUtilsInterface.swift; sourceTree = "<group>"; };
-		A97AFB1820C01F3D008330DC /* sface-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sface-Bridging-Header.h"; sourceTree = "<group>"; };
 		C672DC171F884446E1E3FD9E /* Pods_SFaceCompareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFaceCompareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEEA5D475A3CA48786B4AD9 /* Pods-SFaceCompareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompareTests/Pods-SFaceCompareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E17C2356EC6E46C467D059 /* Pods-SFaceCompareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompareTests/Pods-SFaceCompareTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,10 +144,11 @@
 		40D23E1D20B98B24002E6479 /* SFaceCompare */ = {
 			isa = PBXGroup;
 			children = (
-				A97AFB1820C01F3D008330DC /* sface-Bridging-Header.h */,
 				A97AFAEB20BFBDD9008330DC /* CVUtils */,
 				40D23E1E20B98B24002E6479 /* SFaceCompare.h */,
 				40D23E1F20B98B24002E6479 /* Info.plist */,
+				40D6299220C48550009855CE /* Logger.swift */,
+				40D6299A20C48689009855CE /* Extensions */,
 			);
 			path = SFaceCompare;
 			sourceTree = "<group>";
@@ -149,6 +160,16 @@
 				40D23E2B20B98B24002E6479 /* Info.plist */,
 			);
 			path = SFaceCompareTests;
+			sourceTree = "<group>";
+		};
+		40D6299A20C48689009855CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				40D6299420C48577009855CE /* UIImage+.swift */,
+				40D6299620C48632009855CE /* Date+.swift */,
+				40D6299820C48652009855CE /* Formatter+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		98A347AD45C0DEC6C7CC377B /* Pods */ = {
@@ -173,12 +194,13 @@
 		A97AFAEB20BFBDD9008330DC /* CVUtils */ = {
 			isa = PBXGroup;
 			children = (
+				A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */,
+				40D6298B20C4245F009855CE /* module.modulemap */,
 				A97AFB0F20BFED08008330DC /* ml_models */,
 				A97AFB0420BFD881008330DC /* general */,
 				A97AFAF520BFC065008330DC /* converters */,
-				A97AFAF120BFC007008330DC /* OpenCVWrapper.h */,
+				A97AFAF120BFC007008330DC /* OpenCVWrapper.hpp */,
 				A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */,
-				A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */,
 			);
 			path = CVUtils;
 			sourceTree = "<group>";
@@ -222,9 +244,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D6299020C42AC0009855CE /* UIImage_CVMat.h in Headers */,
+				40D6298F20C42ABE009855CE /* CIImage_CVMat.h in Headers */,
 				40D23E2C20B98B24002E6479 /* SFaceCompare.h in Headers */,
 				A97AFB0C20BFD976008330DC /* face.hpp in Headers */,
-				A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */,
+				A97AFAF320BFC007008330DC /* OpenCVWrapper.hpp in Headers */,
 				A97AFB0820BFD901008330DC /* general.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,12 +394,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D6299720C48632009855CE /* Date+.swift in Sources */,
 				A97AFB0720BFD901008330DC /* general.cpp in Sources */,
+				40D6299920C48652009855CE /* Formatter+.swift in Sources */,
 				A97AFB0120BFD3DB008330DC /* source.cpp in Sources */,
 				A97AFB0B20BFD976008330DC /* face.cpp in Sources */,
 				A97AFAFF20BFD01E008330DC /* UIImage_CVMat.mm in Sources */,
+				40D6299320C48550009855CE /* Logger.swift in Sources */,
 				A97AFB1720C01A05008330DC /* CVUtilsInterface.swift in Sources */,
 				A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */,
+				40D6299520C48577009855CE /* UIImage+.swift in Sources */,
 				A97AFB1520BFED3D008330DC /* OpenFace.mlmodel in Sources */,
 				A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */,
 			);
@@ -543,9 +571,11 @@
 					DLIB_USE_BLAS,
 					DLIB_USE_LAPACK,
 				);
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				INFOPLIST_FILE = SFaceCompare/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +588,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompare;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SFaceCompare/sface-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SFaceCompare/CVUtils";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -589,9 +620,11 @@
 					DLIB_USE_BLAS,
 					DLIB_USE_LAPACK,
 				);
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				INFOPLIST_FILE = SFaceCompare/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,7 +638,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompare;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SFaceCompare/sface-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SFaceCompare/CVUtils";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";

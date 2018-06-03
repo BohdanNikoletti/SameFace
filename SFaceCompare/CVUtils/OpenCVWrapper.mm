@@ -6,9 +6,9 @@
 //  Copyright © 2018 Bohdan Mihiliev. All rights reserved.
 //
 
-#import "OpenCVWrapper.h"
+#import "OpenCVWrapper.hpp"
 
-#import <opencv2/opencv.hpp>
+//#import <opencv2/opencv.hpp>
 #include <dlib/image_processing.h>
 #include <dlib/image_processing/frontal_face_detector.h>
 

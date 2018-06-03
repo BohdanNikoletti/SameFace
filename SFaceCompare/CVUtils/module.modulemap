@@ -1,0 +1,4 @@
+module PrivateOpenCVModule {
+  header "OpenCVWrapper.hpp"
+  export *
+}

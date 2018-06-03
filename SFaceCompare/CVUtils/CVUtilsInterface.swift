@@ -6,6 +6,7 @@
 //  Copyright © 2018 Bohdan Mihiliev. All rights reserved.
 //
 
+import PrivateOpenCVModule
 
 public struct CVUtilsInterface {
   
@@ -19,26 +20,33 @@ public struct CVUtilsInterface {
    
    - returns: True if faces are same and false if they are not.
    */
-  public static func areSameFaces(on firstImage: UIImage, and secondImage: UIImage, facesFound: Bool) -> Bool {
-    if let firstAlignedFace = opncvwrp.faceAlign(firstImage, facesFound), let secondAlignedFace = opncvwrp.faceAlign(secondImage, facesFound) {
-      do {
-        let net = OpenFace()
-        if let firstPixelBuffer = firstAlignedFace.cvPixelBuffer, let secondPixelBuffer = secondAlignedFace.cvPixelBuffer {
-          // neural networks answers getting
-          let firstOutput = try net.prediction(data: firstPixelBuffer).output
-          let secondOutput = try net.prediction(data: secondPixelBuffer).output
-          var result = 0.0
-          // network outputs differece calculating
-          for idx in 0..<128 {
-            result += (Double(truncating: firstOutput[idx]) - Double(truncating: secondOutput[idx]))
-              * (Double(truncating: firstOutput[idx]) - Double(truncating: secondOutput[idx]))
-          }
-          return result < 1.0
-        }
-      } catch {
-        return false
-      }
+  public static func areSameFaces(on firstImage: UIImage,
+                                  and secondImage: UIImage,
+                                  facesFound: Bool) -> Bool {
+    guard let firstAlignedFace = opncvwrp.faceAlign(firstImage, facesFound),
+      let secondAlignedFace = opncvwrp.faceAlign(secondImage, facesFound) else {
+         return false
     }
-    return false
+    do {
+      let net = OpenFace()
+      guard let firstPixelBuffer = firstAlignedFace.cvPixelBuffer,
+        let secondPixelBuffer = secondAlignedFace.cvPixelBuffer else {
+          return false
+      }
+      // neural networks answers getting
+      let firstOutput = try net.prediction(data: firstPixelBuffer).output
+      let secondOutput = try net.prediction(data: secondPixelBuffer).output
+      var result = 0.0
+      
+      // network outputs differece calculating
+      for idx in 0..<128 {
+        result += (Double(truncating: firstOutput[idx]) - Double(truncating: secondOutput[idx]))
+          * (Double(truncating: firstOutput[idx]) - Double(truncating: secondOutput[idx]))
+      }
+      return result < 1.0
+    } catch {
+      Logger.e(error.localizedDescription)
+      return false
+    }
   }
 }

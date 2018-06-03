@@ -8,11 +8,11 @@
 #ifndef OpenCVWrapper_h
 #define OpenCVWrapper_h
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+//#import <Foundation/Foundation.h>
+//#import <UIKit/UIKit.h>
 #import "converters/UIImage_CVMat.h"
 #import "converters/CIImage_CVMat.h"
-#import <opencv2/opencv.hpp>
+//#import "opencv2/opencv.hpp"
 #include "general/face.hpp"
 
 @interface OpenCVWrapper : NSObject
