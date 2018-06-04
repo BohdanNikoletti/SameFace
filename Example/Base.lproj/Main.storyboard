@@ -29,10 +29,21 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MTa-7w-A1J">
+                                <rect key="frame" x="169" y="28" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.25490196079999999" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzk-YN-igU">
+                                <rect key="frame" x="164" y="637" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wRU-d4-cE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="Aq3-0J-09V"/>
+                            <constraint firstItem="MTa-7w-A1J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D1k-35-rcw"/>
+                            <constraint firstItem="MTa-7w-A1J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="aOx-pc-BuC"/>
                             <constraint firstItem="wRU-d4-cE6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="hDJ-fV-28Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wRU-d4-cE6" secondAttribute="bottom" constant="64" id="m36-Oi-PY8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wRU-d4-cE6" secondAttribute="trailing" constant="64" id="nF2-Ut-K1W"/>
@@ -40,6 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="MTa-7w-A1J" id="OlG-mh-R1X"/>
                         <outlet property="firstImageView" destination="FAb-DT-WNp" id="cMv-3I-NIj"/>
                         <outlet property="secondImageView" destination="hFL-36-beL" id="lz9-vT-lPx"/>
                     </connections>
