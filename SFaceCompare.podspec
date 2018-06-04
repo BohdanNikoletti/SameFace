@@ -20,16 +20,11 @@ Pod::Spec.new do |s|
   s.summary = "Simple lib fro iOS to find and compare faces."
   s.requires_arc = true
   s.version = "0.0.1"
-
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                    SFaceCompare is alibrary for comparing faces on iOS devices.
                    DESC
 
-  s.homepage     = "http://geekowl.com.ua"
+  s.homepage     = "https://github.com/BohdanNikoletti/SFaceCompare"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -53,11 +48,11 @@ Pod::Spec.new do |s|
   #  Specify a social_media_url where others can refer to, for example a twitter
   #  profile URL.
   #
-
-  s.author             = { "BohdanNikoletti" => "bohdanrose1@gmail.com" }
+  spec.authors = { 'Bohdan Mihiliev' => 'bohdanrose1@gmail.com',
+                   'Anton Khrolenko'     => 'wookiee@aggrrttaaggrrt.com' }
   # Or just: s.author    = "BohdanNikoletti"
   # s.authors            = { "BohdanNikoletti" => "bohdanrose1@gmail.com" }
-  # s.social_media_url   = "http://twitter.com/BohdanNikoletti"
+  s.social_media_url   = "http://geekowl.com.ua/SFaceCompare"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -83,7 +78,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/BohdanNikoletti/SFaceCompare.git", :tag => "#{s.version}" }
 
-  s.framework = "UIKit"
+  s.ios.frameworks = 'UIKit', 'CoreImage', 'Accelerate'
   s.dependency 'OpenCV'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

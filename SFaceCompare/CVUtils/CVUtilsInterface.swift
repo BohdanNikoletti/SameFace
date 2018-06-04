@@ -43,6 +43,7 @@ public struct CVUtilsInterface {
         result += (Double(truncating: firstOutput[idx]) - Double(truncating: secondOutput[idx]))
           * (Double(truncating: firstOutput[idx]) - Double(truncating: secondOutput[idx]))
       }
+      print(result)
       return result < 1.0
     } catch {
       Logger.e(error.localizedDescription)
