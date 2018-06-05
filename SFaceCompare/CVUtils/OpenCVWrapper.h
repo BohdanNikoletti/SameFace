@@ -26,5 +26,8 @@
  @return Aligned face image 96x96.
  */
 - (UIImage*) faceAlign: (UIImage*) inputImage : (Boolean) needToFindFace;
+
+- (UIImage*) faceAlign: (UIImage*) inputImage;
+- (void) loadData;
 @end
 #endif

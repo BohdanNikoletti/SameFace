@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40D23E2520B98B24002E6479 /* SFaceCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D23E1B20B98B24002E6479 /* SFaceCompare.framework */; };
-		40D23E2A20B98B24002E6479 /* SFaceCompareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23E2920B98B24002E6479 /* SFaceCompareTests.swift */; };
+		40D23E2A20B98B24002E6479 /* FaceComparingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23E2920B98B24002E6479 /* FaceComparingTests.swift */; };
 		40D23E2C20B98B24002E6479 /* SFaceCompare.h in Headers */ = {isa = PBXBuildFile; fileRef = 40D23E1E20B98B24002E6479 /* SFaceCompare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40D6298F20C42ABE009855CE /* CIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFC20BFCF86008330DC /* CIImage_CVMat.h */; };
 		40D6299020C42AC0009855CE /* UIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFD20BFD012008330DC /* UIImage_CVMat.h */; };
@@ -17,8 +17,17 @@
 		40D6299720C48632009855CE /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299620C48632009855CE /* Date+.swift */; };
 		40D6299920C48652009855CE /* Formatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299820C48652009855CE /* Formatter+.swift */; };
 		81BA7DDBA561198FAFBAD399 /* Pods_SFaceCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66212E4A96D0206E66EC9A29 /* Pods_SFaceCompare.framework */; };
+		A90E31FD20C5152600ACF217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E31FC20C5152600ACF217 /* AppDelegate.swift */; };
+		A90E31FF20C5152600ACF217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E31FE20C5152600ACF217 /* ViewController.swift */; };
+		A90E320220C5152600ACF217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90E320020C5152600ACF217 /* Main.storyboard */; };
+		A90E320420C5152600ACF217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90E320320C5152600ACF217 /* Assets.xcassets */; };
+		A90E320720C5152600ACF217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90E320520C5152600ACF217 /* LaunchScreen.storyboard */; };
+		A90E320E20C51DC100ACF217 /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90E320D20C51DC100ACF217 /* TestAssets.xcassets */; };
+		A90E321120C5316F00ACF217 /* FaceDetectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E321020C5316F00ACF217 /* FaceDetectionOperation.swift */; };
+		A90E321220C5591100ACF217 /* SFaceCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D23E1B20B98B24002E6479 /* SFaceCompare.framework */; };
+		A90E321420C69A6400ACF217 /* SFaceCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E321320C69A6400ACF217 /* SFaceCompare.swift */; };
 		A97AFAEA20BFBBA4008330DC /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFAE920BFBBA4008330DC /* libdlib.a */; };
-		A97AFAF320BFC007008330DC /* OpenCVWrapper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAF120BFC007008330DC /* OpenCVWrapper.hpp */; };
+		A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAF120BFC007008330DC /* OpenCVWrapper.h */; };
 		A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */; };
 		A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAFA20BFCF72008330DC /* CIImage_CVMat.mm */; };
 		A97AFAFF20BFD01E008330DC /* UIImage_CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAFE20BFD01E008330DC /* UIImage_CVMat.mm */; };
@@ -33,6 +42,10 @@
 		A97AFB1420BFED3D008330DC /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */; };
 		A97AFB1520BFED3D008330DC /* OpenFace.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1220BFED3D008330DC /* OpenFace.mlmodel */; };
 		A97AFB1720C01A05008330DC /* CVUtilsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */; };
+		A9B903E420C6C44A0000C7D5 /* SFaceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E320C6C44A0000C7D5 /* SFaceError.swift */; };
+		A9B903E720C6CC1E0000C7D5 /* CIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E620C6CC1E0000C7D5 /* CIImage+.swift */; };
+		A9B903EA20C6CC390000C7D5 /* BaseDetectionProcessOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E920C6CC390000C7D5 /* BaseDetectionProcessOperation.swift */; };
+		A9B903EC20C6CC620000C7D5 /* DetectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903EB20C6CC620000C7D5 /* DetectionResult.swift */; };
 		BE94153BC88049A7C56675D3 /* Pods_SFaceCompareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C672DC171F884446E1E3FD9E /* Pods_SFaceCompareTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +64,7 @@
 		40D23E1E20B98B24002E6479 /* SFaceCompare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFaceCompare.h; sourceTree = "<group>"; };
 		40D23E1F20B98B24002E6479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40D23E2420B98B24002E6479 /* SFaceCompareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFaceCompareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		40D23E2920B98B24002E6479 /* SFaceCompareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFaceCompareTests.swift; sourceTree = "<group>"; };
+		40D23E2920B98B24002E6479 /* FaceComparingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceComparingTests.swift; sourceTree = "<group>"; };
 		40D23E2B20B98B24002E6479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40D6298B20C4245F009855CE /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		40D6299220C48550009855CE /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -61,8 +74,18 @@
 		57EB02AB45B571AB2874FE36 /* Pods-SFaceCompare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompare/Pods-SFaceCompare.debug.xcconfig"; sourceTree = "<group>"; };
 		619AC758A5D491AA32B6C853 /* Pods-SFaceCompare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompare.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompare/Pods-SFaceCompare.release.xcconfig"; sourceTree = "<group>"; };
 		66212E4A96D0206E66EC9A29 /* Pods_SFaceCompare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFaceCompare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90E31FA20C5152500ACF217 /* SFaceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFaceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90E31FC20C5152600ACF217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A90E31FE20C5152600ACF217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A90E320120C5152600ACF217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A90E320320C5152600ACF217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A90E320620C5152600ACF217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A90E320820C5152600ACF217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A90E320D20C51DC100ACF217 /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
+		A90E321020C5316F00ACF217 /* FaceDetectionOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionOperation.swift; sourceTree = "<group>"; };
+		A90E321320C69A6400ACF217 /* SFaceCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFaceCompare.swift; sourceTree = "<group>"; };
 		A97AFAE920BFBBA4008330DC /* libdlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdlib.a; sourceTree = "<group>"; };
-		A97AFAF120BFC007008330DC /* OpenCVWrapper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OpenCVWrapper.hpp; sourceTree = "<group>"; };
+		A97AFAF120BFC007008330DC /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		A97AFAFA20BFCF72008330DC /* CIImage_CVMat.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CIImage_CVMat.mm; sourceTree = "<group>"; };
 		A97AFAFC20BFCF86008330DC /* CIImage_CVMat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIImage_CVMat.h; sourceTree = "<group>"; };
@@ -79,6 +102,10 @@
 		A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
 		A97AFB1220BFED3D008330DC /* OpenFace.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = OpenFace.mlmodel; sourceTree = "<group>"; };
 		A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVUtilsInterface.swift; sourceTree = "<group>"; };
+		A9B903E320C6C44A0000C7D5 /* SFaceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFaceError.swift; sourceTree = "<group>"; };
+		A9B903E620C6CC1E0000C7D5 /* CIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+.swift"; sourceTree = "<group>"; };
+		A9B903E920C6CC390000C7D5 /* BaseDetectionProcessOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetectionProcessOperation.swift; sourceTree = "<group>"; };
+		A9B903EB20C6CC620000C7D5 /* DetectionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionResult.swift; sourceTree = "<group>"; };
 		C672DC171F884446E1E3FD9E /* Pods_SFaceCompareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFaceCompareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEEA5D475A3CA48786B4AD9 /* Pods-SFaceCompareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompareTests/Pods-SFaceCompareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E17C2356EC6E46C467D059 /* Pods-SFaceCompareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFaceCompareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFaceCompareTests/Pods-SFaceCompareTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +132,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A90E31F720C5152500ACF217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90E321220C5591100ACF217 /* SFaceCompare.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -126,6 +161,7 @@
 				A97AFAE820BFBB50008330DC /* lib */,
 				40D23E1D20B98B24002E6479 /* SFaceCompare */,
 				40D23E2820B98B24002E6479 /* SFaceCompareTests */,
+				A90E31FB20C5152600ACF217 /* Example */,
 				40D23E1C20B98B24002E6479 /* Products */,
 				98A347AD45C0DEC6C7CC377B /* Pods */,
 				3E630ED4602C616234AC8A01 /* Frameworks */,
@@ -137,6 +173,7 @@
 			children = (
 				40D23E1B20B98B24002E6479 /* SFaceCompare.framework */,
 				40D23E2420B98B24002E6479 /* SFaceCompareTests.xctest */,
+				A90E31FA20C5152500ACF217 /* SFaceExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,11 +181,12 @@
 		40D23E1D20B98B24002E6479 /* SFaceCompare */ = {
 			isa = PBXGroup;
 			children = (
+				A9B903ED20C6E1E20000C7D5 /* Resources */,
 				A97AFAEB20BFBDD9008330DC /* CVUtils */,
-				40D23E1E20B98B24002E6479 /* SFaceCompare.h */,
-				40D23E1F20B98B24002E6479 /* Info.plist */,
-				40D6299220C48550009855CE /* Logger.swift */,
+				A9B903E520C6C44F0000C7D5 /* Logging Utils */,
 				40D6299A20C48689009855CE /* Extensions */,
+				A9B903E820C6CC2C0000C7D5 /* DetectionOperation */,
+				A90E321320C69A6400ACF217 /* SFaceCompare.swift */,
 			);
 			path = SFaceCompare;
 			sourceTree = "<group>";
@@ -156,8 +194,9 @@
 		40D23E2820B98B24002E6479 /* SFaceCompareTests */ = {
 			isa = PBXGroup;
 			children = (
-				40D23E2920B98B24002E6479 /* SFaceCompareTests.swift */,
+				40D23E2920B98B24002E6479 /* FaceComparingTests.swift */,
 				40D23E2B20B98B24002E6479 /* Info.plist */,
+				A90E320D20C51DC100ACF217 /* TestAssets.xcassets */,
 			);
 			path = SFaceCompareTests;
 			sourceTree = "<group>";
@@ -168,6 +207,7 @@
 				40D6299420C48577009855CE /* UIImage+.swift */,
 				40D6299620C48632009855CE /* Date+.swift */,
 				40D6299820C48652009855CE /* Formatter+.swift */,
+				A9B903E620C6CC1E0000C7D5 /* CIImage+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +221,27 @@
 				E1E17C2356EC6E46C467D059 /* Pods-SFaceCompareTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A90E31FB20C5152600ACF217 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				A90E31FE20C5152600ACF217 /* ViewController.swift */,
+				A90E320020C5152600ACF217 /* Main.storyboard */,
+				A90E320C20C5159A00ACF217 /* Resources */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		A90E320C20C5159A00ACF217 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A90E31FC20C5152600ACF217 /* AppDelegate.swift */,
+				A90E320320C5152600ACF217 /* Assets.xcassets */,
+				A90E320520C5152600ACF217 /* LaunchScreen.storyboard */,
+				A90E320820C5152600ACF217 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		A97AFAE820BFBB50008330DC /* lib */ = {
@@ -199,7 +260,7 @@
 				A97AFB0F20BFED08008330DC /* ml_models */,
 				A97AFB0420BFD881008330DC /* general */,
 				A97AFAF520BFC065008330DC /* converters */,
-				A97AFAF120BFC007008330DC /* OpenCVWrapper.hpp */,
+				A97AFAF120BFC007008330DC /* OpenCVWrapper.h */,
 				A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */,
 			);
 			path = CVUtils;
@@ -237,6 +298,34 @@
 			path = ml_models;
 			sourceTree = "<group>";
 		};
+		A9B903E520C6C44F0000C7D5 /* Logging Utils */ = {
+			isa = PBXGroup;
+			children = (
+				40D6299220C48550009855CE /* Logger.swift */,
+				A9B903E320C6C44A0000C7D5 /* SFaceError.swift */,
+			);
+			path = "Logging Utils";
+			sourceTree = "<group>";
+		};
+		A9B903E820C6CC2C0000C7D5 /* DetectionOperation */ = {
+			isa = PBXGroup;
+			children = (
+				A9B903E920C6CC390000C7D5 /* BaseDetectionProcessOperation.swift */,
+				A90E321020C5316F00ACF217 /* FaceDetectionOperation.swift */,
+				A9B903EB20C6CC620000C7D5 /* DetectionResult.swift */,
+			);
+			path = DetectionOperation;
+			sourceTree = "<group>";
+		};
+		A9B903ED20C6E1E20000C7D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				40D23E1E20B98B24002E6479 /* SFaceCompare.h */,
+				40D23E1F20B98B24002E6479 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -248,7 +337,7 @@
 				40D6298F20C42ABE009855CE /* CIImage_CVMat.h in Headers */,
 				40D23E2C20B98B24002E6479 /* SFaceCompare.h in Headers */,
 				A97AFB0C20BFD976008330DC /* face.hpp in Headers */,
-				A97AFAF320BFC007008330DC /* OpenCVWrapper.hpp in Headers */,
+				A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */,
 				A97AFB0820BFD901008330DC /* general.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,14 +383,31 @@
 			productReference = 40D23E2420B98B24002E6479 /* SFaceCompareTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A90E31F920C5152500ACF217 /* SFaceExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90E320920C5152600ACF217 /* Build configuration list for PBXNativeTarget "SFaceExample" */;
+			buildPhases = (
+				A90E31F620C5152500ACF217 /* Sources */,
+				A90E31F720C5152500ACF217 /* Frameworks */,
+				A90E31F820C5152500ACF217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFaceExample;
+			productName = SFaceExample;
+			productReference = A90E31FA20C5152500ACF217 /* SFaceExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		40D23E1220B98B24002E6479 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Bohdan Mihiliev";
 				TargetAttributes = {
 					40D23E1A20B98B24002E6479 = {
@@ -311,6 +417,9 @@
 					40D23E2320B98B24002E6479 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
+					A90E31F920C5152500ACF217 = {
+						CreatedOnToolsVersion = 9.4;
+					};
 				};
 			};
 			buildConfigurationList = 40D23E1520B98B24002E6479 /* Build configuration list for PBXProject "SFaceCompare" */;
@@ -319,6 +428,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 40D23E1120B98B24002E6479;
 			productRefGroup = 40D23E1C20B98B24002E6479 /* Products */;
@@ -327,6 +437,7 @@
 			targets = (
 				40D23E1A20B98B24002E6479 /* SFaceCompare */,
 				40D23E2320B98B24002E6479 /* SFaceCompareTests */,
+				A90E31F920C5152500ACF217 /* SFaceExample */,
 			);
 		};
 /* End PBXProject section */
@@ -345,6 +456,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90E320E20C51DC100ACF217 /* TestAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90E31F820C5152500ACF217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90E320720C5152600ACF217 /* LaunchScreen.storyboard in Resources */,
+				A90E320420C5152600ACF217 /* Assets.xcassets in Resources */,
+				A90E320220C5152600ACF217 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,15 +519,21 @@
 				40D6299720C48632009855CE /* Date+.swift in Sources */,
 				A97AFB0720BFD901008330DC /* general.cpp in Sources */,
 				40D6299920C48652009855CE /* Formatter+.swift in Sources */,
+				A9B903E720C6CC1E0000C7D5 /* CIImage+.swift in Sources */,
 				A97AFB0120BFD3DB008330DC /* source.cpp in Sources */,
 				A97AFB0B20BFD976008330DC /* face.cpp in Sources */,
 				A97AFAFF20BFD01E008330DC /* UIImage_CVMat.mm in Sources */,
+				A9B903EC20C6CC620000C7D5 /* DetectionResult.swift in Sources */,
 				40D6299320C48550009855CE /* Logger.swift in Sources */,
 				A97AFB1720C01A05008330DC /* CVUtilsInterface.swift in Sources */,
+				A90E321420C69A6400ACF217 /* SFaceCompare.swift in Sources */,
+				A90E321120C5316F00ACF217 /* FaceDetectionOperation.swift in Sources */,
+				A9B903EA20C6CC390000C7D5 /* BaseDetectionProcessOperation.swift in Sources */,
 				A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */,
 				40D6299520C48577009855CE /* UIImage+.swift in Sources */,
 				A97AFB1520BFED3D008330DC /* OpenFace.mlmodel in Sources */,
 				A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */,
+				A9B903E420C6C44A0000C7D5 /* SFaceError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +541,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40D23E2A20B98B24002E6479 /* SFaceCompareTests.swift in Sources */,
+				40D23E2A20B98B24002E6479 /* FaceComparingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90E31F620C5152500ACF217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90E31FF20C5152600ACF217 /* ViewController.swift in Sources */,
+				A90E31FD20C5152600ACF217 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +563,25 @@
 			targetProxy = 40D23E2620B98B24002E6479 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A90E320020C5152600ACF217 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A90E320120C5152600ACF217 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A90E320520C5152600ACF217 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A90E320620C5152600ACF217 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		40D23E2D20B98B24002E6479 /* Debug */ = {
@@ -552,7 +708,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57EB02AB45B571AB2874FE36 /* Pods-SFaceCompare.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -573,7 +728,7 @@
 				);
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
-				INFOPLIST_FILE = SFaceCompare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SFaceCompare/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -601,7 +756,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 619AC758A5D491AA32B6C853 /* Pods-SFaceCompare.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -622,7 +776,7 @@
 				);
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
-				INFOPLIST_FILE = SFaceCompare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SFaceCompare/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -686,6 +840,42 @@
 			};
 			name = Release;
 		};
+		A90E320A20C5152600ACF217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A90E320B20C5152600ACF217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -712,6 +902,15 @@
 			buildConfigurations = (
 				40D23E3320B98B24002E6479 /* Debug */,
 				40D23E3420B98B24002E6479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90E320920C5152600ACF217 /* Build configuration list for PBXNativeTarget "SFaceExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90E320A20C5152600ACF217 /* Debug */,
+				A90E320B20C5152600ACF217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
