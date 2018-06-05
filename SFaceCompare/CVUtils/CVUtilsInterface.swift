@@ -7,6 +7,7 @@
 //
 
 import PrivateOpenCVModule
+import Vision
 
 public struct CVUtilsInterface {
   

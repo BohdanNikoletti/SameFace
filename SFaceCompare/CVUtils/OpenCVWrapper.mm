@@ -6,7 +6,7 @@
 //  Copyright © 2018 Bohdan Mihiliev. All rights reserved.
 //
 
-#import "OpenCVWrapper.hpp"
+#import "OpenCVWrapper.h"
 
 //#import <opencv2/opencv.hpp>
 #include <dlib/image_processing.h>
@@ -20,13 +20,13 @@ cv::Point2f FACE_ALIGN_TEMPLATE[68];
 
 - (instancetype) init {
   self = [super init];
-  NSBundle* sdkBundle = [NSBundle bundleForClass:[self class]];
-  NSString *dir = [sdkBundle resourcePath];
-  const char *cpath = [dir fileSystemRepresentation];
-  std::string homePath(cpath);
+//  NSBundle* sdkBundle = [NSBundle bundleForClass:[self class]];
+//  NSString *dir = [sdkBundle resourcePath];
+//  const char *cpath = [dir fileSystemRepresentation];
+//  std::string homePath(cpath);
   
-  dlib::deserialize(homePath + "/shape_predictor_68_face_landmarks.xml") >> faceShapePredictor;
-  faceCascade.load(homePath + "/haarcascade_frontalface_alt.xml");
+//  dlib::deserialize(homePath + "/shape_predictor_68_face_landmarks.xml") >> faceShapePredictor;
+//  faceCascade.load(homePath + "/haarcascade_frontalface_alt.xml");
   
   FACE_ALIGN_TEMPLATE[0] = cv::Point2f(0.0792396913815, 0.339223741112);  FACE_ALIGN_TEMPLATE[1] = cv::Point2f(0.0829219487236, 0.456955367943);
   FACE_ALIGN_TEMPLATE[2] = cv::Point2f(0.0967927109165, 0.575648016728);  FACE_ALIGN_TEMPLATE[3] = cv::Point2f(0.122141515615, 0.691921601066);
@@ -84,7 +84,21 @@ cv::Point2f FACE_ALIGN_TEMPLATE[68];
   return self;
 }
 
+- (void) loadData {
+  NSBundle* sdkBundle = [NSBundle bundleForClass:[self class]];
+  NSString *dir = [sdkBundle resourcePath];
+  const char *cpath = [dir fileSystemRepresentation];
+  std::string homePath(cpath);
+  dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+    //Background Thread
+    dlib::deserialize(homePath + "/shape_predictor_68_face_landmarks.xml") >> faceShapePredictor;
+    faceCascade.load(homePath + "/haarcascade_frontalface_alt.xml");
+//    dispatch_async(dispatch_get_main_queue(), ^(void){
+//      //Run UI Updates
+//    });
+  });
 
+}
 - (UIImage*) faceAlign: (UIImage*) inputImage : (Boolean) needToFindFace {
   cv::Mat matInputImage = [inputImage CVMat3];
   cv::Mat faceImg;
@@ -92,6 +106,12 @@ cv::Point2f FACE_ALIGN_TEMPLATE[68];
     faceImg = faceAlign(matInputImage, faceShapePredictor, faceCascade, FACE_ALIGN_TEMPLATE);
   else
     faceImg = faceAlign(matInputImage, faceShapePredictor, faceCascade, FACE_ALIGN_TEMPLATE, cv::Rect(0, 0, matInputImage.cols, matInputImage.rows));
+  return [UIImage UIImageFromCVMat: faceImg];
+}
+
+- (UIImage*) faceAlign: (UIImage*) inputImage {
+  cv::Mat matInputImage = [inputImage CVMat3];
+  cv::Mat faceImg = faceAlign(matInputImage, faceShapePredictor, faceCascade, FACE_ALIGN_TEMPLATE, cv::Rect(0, 0, matInputImage.cols, matInputImage.rows));
   return [UIImage UIImageFromCVMat: faceImg];
 }
 @end

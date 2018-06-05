@@ -14,19 +14,24 @@ final class ViewController: UIViewController {
   // MARK: - Outlets
   @IBOutlet weak private var firstImageView: UIImageView!
   @IBOutlet weak private var secondImageView: UIImageView!
-  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet weak private var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet weak private var infoLabel: UILabel!
   
   // MARK: - Properties
   private var images = [UIImage]() {
     didSet {
       if images.count == 2 {
         activityIndicator.startAnimating()
-        DispatchQueue.global(qos: .background).async {
-          CVUtilsInterface.areSameFaces(on: self.images[0], and: self.images[1], facesFound: true)
-          DispatchQueue.main.async {
-            self.activityIndicator.stopAnimating()
-          }
-        }
+        let faceComparator = SFaceCompare.init(on: self.images[0], and: self.images[1])
+        faceComparator.compareFaces(succes: { [weak self] results in
+          self?.activityIndicator.stopAnimating()
+          self?.view.backgroundColor = UIColor.green
+          self?.infoLabel.text = "Yay! Faces are the same!"
+        }, failure: { [weak self] error in
+          self?.activityIndicator.stopAnimating()
+          self?.infoLabel.text = (error as? SFaceError)?.localizedDescription
+          self?.view.backgroundColor = UIColor.red
+        })
       }
     }
   }
@@ -35,12 +40,8 @@ final class ViewController: UIViewController {
   // MARK: - Lifecycle events
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    let firstImageViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.connected(_:)))
-    let secondImageViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.connected(_:)))
-    
-    firstImageView.addGestureRecognizer(firstImageViewTapGestureRecognizer)
-    secondImageView.addGestureRecognizer(secondImageViewTapGestureRecognizer)
+    setDegaultViewsStates()
+    addClickListenersToImageViews()
   }
   
   override func didReceiveMemoryWarning() {
@@ -49,16 +50,10 @@ final class ViewController: UIViewController {
   
   override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
     if motion == .motionShake  {
-      print("Did Shake")
-      images.removeAll()
-      firstImageView.image = #imageLiteral(resourceName: "empty-image")
-      secondImageView.image = #imageLiteral(resourceName: "empty-image")
-      firstImageView.isUserInteractionEnabled = true
-      UIView.animate(withDuration: 0.35, animations: {
-        self.secondImageView.alpha = 0.1
-      })
+      setDegaultViewsStates()
     }
   }
+  
   
   // MARK: - Actions
   @objc func connected( _ sender:AnyObject) {
@@ -66,6 +61,26 @@ final class ViewController: UIViewController {
     presentImagePicker()
   }
   
+  // MARK: - Private methods
+  private func setDegaultViewsStates() {
+    images.removeAll()
+    infoLabel.text = ""
+    firstImageView.image = #imageLiteral(resourceName: "empty-image")
+    secondImageView.image = #imageLiteral(resourceName: "empty-image")
+    firstImageView.isUserInteractionEnabled = true
+    UIView.animate(withDuration: 0.35, animations: { [weak self] in
+      self?.view.backgroundColor = UIColor.white
+      self?.secondImageView.alpha = 0.1
+    })
+  }
+  
+  private func addClickListenersToImageViews() {
+    let firstImageViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.connected(_:)))
+    let secondImageViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.connected(_:)))
+    
+    firstImageView.addGestureRecognizer(firstImageViewTapGestureRecognizer)
+    secondImageView.addGestureRecognizer(secondImageViewTapGestureRecognizer)
+  }
 }
 
 // MARK: - UIImagePickerControllerDelegate
@@ -73,27 +88,26 @@ extension ViewController: UIImagePickerControllerDelegate {
   
   func imagePickerController(_ picker: UIImagePickerController,
                              didFinishPickingMediaWithInfo info: [String : Any]) {
-    
-    if let selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage {
-      dismiss(animated: true, completion: { [unowned self] in
-        self.images.append(selectedPhoto)
-        switch self.selectedImageViewTag {
-        case 0:
-          self.firstImageView.image = selectedPhoto
-          self.secondImageView.isUserInteractionEnabled = true
-          self.firstImageView.isUserInteractionEnabled = false
-          UIView.animate(withDuration: 0.35, animations: {
-            self.secondImageView.alpha = 1
-          })
-        case 1:
-          self.secondImageView.image = selectedPhoto
-          self.secondImageView.isUserInteractionEnabled = false
-        default:
-          fatalError("Unexpected behaviour")
-        }
-      })
+    guard let selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+      return
     }
-    
+    dismiss(animated: true, completion: { [unowned self, selectedPhoto] in
+      self.images.append(selectedPhoto)
+      switch self.selectedImageViewTag {
+      case 0:
+        self.firstImageView.image = selectedPhoto
+        self.secondImageView.isUserInteractionEnabled = true
+        self.firstImageView.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.35, animations: { [weak self] in
+          self?.secondImageView.alpha = 1
+        })
+      case 1:
+        self.secondImageView.image = selectedPhoto
+        self.secondImageView.isUserInteractionEnabled = false
+      default:
+        fatalError("Unexpected behaviour")
+      }
+    })
   }
   
   func presentImagePicker() {
@@ -102,7 +116,7 @@ extension ViewController: UIImagePickerControllerDelegate {
     
     if UIImagePickerController.isSourceTypeAvailable(.camera) {
       let cameraButton = UIAlertAction(title: "Take Photo",
-                                       style: .default) { (alert) -> Void in
+                                       style: .default) { [unowned self] (alert) -> Void in
                                         let imagePicker = UIImagePickerController()
                                         imagePicker.delegate = self
                                         imagePicker.sourceType = .camera
@@ -112,7 +126,7 @@ extension ViewController: UIImagePickerControllerDelegate {
     }
     
     let libraryButton = UIAlertAction(title: "Choose Existing",
-                                      style: .default) { (alert) -> Void in
+                                      style: .default) { [unowned self] (alert) -> Void in
                                         let imagePicker = UIImagePickerController()
                                         imagePicker.delegate = self
                                         imagePicker.sourceType = .photoLibrary
