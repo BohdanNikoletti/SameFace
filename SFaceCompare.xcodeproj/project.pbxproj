@@ -181,9 +181,8 @@
 		40D23E1D20B98B24002E6479 /* SFaceCompare */ = {
 			isa = PBXGroup;
 			children = (
+				A9B903ED20C6E1E20000C7D5 /* Resources */,
 				A97AFAEB20BFBDD9008330DC /* CVUtils */,
-				40D23E1E20B98B24002E6479 /* SFaceCompare.h */,
-				40D23E1F20B98B24002E6479 /* Info.plist */,
 				A9B903E520C6C44F0000C7D5 /* Logging Utils */,
 				40D6299A20C48689009855CE /* Extensions */,
 				A9B903E820C6CC2C0000C7D5 /* DetectionOperation */,
@@ -316,6 +315,15 @@
 				A9B903EB20C6CC620000C7D5 /* DetectionResult.swift */,
 			);
 			path = DetectionOperation;
+			sourceTree = "<group>";
+		};
+		A9B903ED20C6E1E20000C7D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				40D23E1E20B98B24002E6479 /* SFaceCompare.h */,
+				40D23E1F20B98B24002E6479 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,7 +728,7 @@
 				);
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
-				INFOPLIST_FILE = SFaceCompare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SFaceCompare/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -768,7 +776,7 @@
 				);
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
-				INFOPLIST_FILE = SFaceCompare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SFaceCompare/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (

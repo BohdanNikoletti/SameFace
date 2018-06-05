@@ -27,10 +27,9 @@ public class SFaceCompare {
   /**
    Compares faces from the two input image.
    
-   - parameter firstImage: Image with first face to compare.
-   - parameter secondImage: Image with second face to compare.
+   - parameter succes: Handler will call if Faces are the same.
+   - parameter failure: Handler will call if some error occurred.
    
-   - returns: True if faces are same and false if they are not.
    */
   public func compareFaces(succes: @escaping ([DetectionResult])->(), failure: @escaping (Error) -> () ) { //  func areSameFaces(on firstImage: UIImage, and secondImage: UIImage) {
     
@@ -102,7 +101,6 @@ public class SFaceCompare {
             * (Double(truncating: firstOutput[idx]) - Double(truncating: secondOutput[idx]))
         }
         print(result)
-        //        return result < 1.0
         if result < 1.0 {
           DispatchQueue.main.async {
             succes([firstFaceOperationResults, secondFaceOperationResults])
@@ -129,55 +127,4 @@ public class SFaceCompare {
                                        secondFaceDetectionOperation,
                                        finishOperation], waitUntilFinished: false)
   }
-  
-  deinit {
-    Logger.i("Deinited")
-  }
-  //  func detect(facesCount: Int, on image: UIImage) {
-  //
-  //    let recognitionRequest = VNDetectFaceRectanglesRequest { request, error in
-  //      if let error = error {
-  //        Logger.e("\(error.localizedDescription)")
-  //        return
-  //      }
-  //
-  //      guard let results = request.results as? [VNFaceObservation] else {
-  //        fatalError("Unexpected result type from VNDetectFaceRectanglesRequest")
-  //      }
-  //
-  ////      // Need check results only if objectsCountToDetect isn't default
-  ////      if facesCount != 0 {
-  ////        guard results.count == objectsCountToDetect else {
-  ////          Logger.e("Wrong Face Results count: Founded - \(results.count) | Required - \(facesCount)")
-  ////          return
-  ////        }
-  ////      }
-  //      let cGAffineTransform = CGAffineTransform.identity
-  //        .scaledBy(x: image.size.width, y: -image.size.height)
-  //        .translatedBy(x: 0, y: -1)
-  //
-  //      let detectedFaces = results
-  //        .lazy
-  //        .map { $0.boundingBox.applying(cGAffineTransform) }
-  //        .compactMap {  rect -> DetectionResult? in
-  //          guard let detectedFaceCIImage = image
-  //            .cgImage?
-  //            .cropping(to: rect) else { return nil }
-  //          return DetectionResult(image: UIImage(cgImage: detectedFaceCIImage),
-  //                                 rect: rect)
-  //      }
-  //    }
-  //
-  //    guard let cgImageToProcess = image.cgImage else {
-  //      Logger.e("Can not Extract CGImage from UIImage")
-  //      return
-  //    }
-  //
-  //    let vNImageRequestHandler = VNImageRequestHandler(cgImage: cgImageToProcess, options: [:])
-  //    do {
-  //      try vNImageRequestHandler.perform([recognitionRequest])
-  //    } catch {
-  //      Logger.e(error.localizedDescription)
-  //    }
-  //  }
 }
