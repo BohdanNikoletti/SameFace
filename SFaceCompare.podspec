@@ -12,14 +12,16 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/BohdanNikoletti/SFaceCompare"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  spec.authors = { 'Bohdan Mihiliev' => 'bohdanrose1@gmail.com',
-                   'Anton Khrolenko' }
-  s.social_media_url   = "http://geekowl.com.ua/SFaceCompare"
+  s.authors = { 'Bohdan Mihiliev' => 'bohdanrose1@gmail.com',
+                   'Anton Khrolenko' => 'hobdag@gmail.com'}
   s.source       = { :git => "https://github.com/BohdanNikoletti/SFaceCompare.git", :tag => "#{s.version}" }
   s.ios.frameworks = 'UIKit', 'CoreImage', 'Accelerate'
   s.dependency 'OpenCV'
-  s.source_files = "SFaceCompare/**/*.{swift}"
-  s.exclude_files = "Classes/Exclude"
-  s.resources = "SFaceCompare/**/*.{png,jpeg,jpg,storyboard,xib}"
-
+  s.static_framework = true
+  s.swift_version = '4.0'
+  s.source_files = 'SFaceCompare/**/*.swift'
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PROJECT_DIR)/lib',
+    'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/SFaceCompare/CVUtils',
+  'SWIFT_VERSION': '4.0' }
+  s.preserve_paths = 'SFaceCompare/CVUtils/module.modulemap'
 end
