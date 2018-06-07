@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40D23E2520B98B24002E6479 /* SFaceCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D23E1B20B98B24002E6479 /* SFaceCompare.framework */; };
+		40D23E2520B98B24002E6479 /* SameFace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D23E1B20B98B24002E6479 /* SameFace.framework */; };
 		40D23E2A20B98B24002E6479 /* FaceComparingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D23E2920B98B24002E6479 /* FaceComparingTests.swift */; };
-		40D23E2C20B98B24002E6479 /* SFaceCompare.h in Headers */ = {isa = PBXBuildFile; fileRef = 40D23E1E20B98B24002E6479 /* SFaceCompare.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40D6298F20C42ABE009855CE /* CIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFC20BFCF86008330DC /* CIImage_CVMat.h */; };
-		40D6299020C42AC0009855CE /* UIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFD20BFD012008330DC /* UIImage_CVMat.h */; };
+		40D23E2C20B98B24002E6479 /* SameFace.h in Headers */ = {isa = PBXBuildFile; fileRef = 40D23E1E20B98B24002E6479 /* SameFace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40D6298F20C42ABE009855CE /* CIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFC20BFCF86008330DC /* CIImage_CVMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40D6299020C42AC0009855CE /* UIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFD20BFD012008330DC /* UIImage_CVMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40D6299320C48550009855CE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299220C48550009855CE /* Logger.swift */; };
 		40D6299520C48577009855CE /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299420C48577009855CE /* UIImage+.swift */; };
 		40D6299720C48632009855CE /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299620C48632009855CE /* Date+.swift */; };
@@ -24,23 +24,23 @@
 		A90E320720C5152600ACF217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90E320520C5152600ACF217 /* LaunchScreen.storyboard */; };
 		A90E320E20C51DC100ACF217 /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90E320D20C51DC100ACF217 /* TestAssets.xcassets */; };
 		A90E321120C5316F00ACF217 /* FaceDetectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E321020C5316F00ACF217 /* FaceDetectionOperation.swift */; };
-		A90E321220C5591100ACF217 /* SFaceCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D23E1B20B98B24002E6479 /* SFaceCompare.framework */; };
+		A90E321220C5591100ACF217 /* SameFace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D23E1B20B98B24002E6479 /* SameFace.framework */; };
 		A90E321420C69A6400ACF217 /* SFaceCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E321320C69A6400ACF217 /* SFaceCompare.swift */; };
 		A97AFAEA20BFBBA4008330DC /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFAE920BFBBA4008330DC /* libdlib.a */; };
-		A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAF120BFC007008330DC /* OpenCVWrapper.h */; };
+		A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAF120BFC007008330DC /* OpenCVWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */; };
 		A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAFA20BFCF72008330DC /* CIImage_CVMat.mm */; };
 		A97AFAFF20BFD01E008330DC /* UIImage_CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAFE20BFD01E008330DC /* UIImage_CVMat.mm */; };
 		A97AFB0120BFD3DB008330DC /* source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB0020BFD3DB008330DC /* source.cpp */; };
 		A97AFB0320BFD4FF008330DC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFB0220BFD4FE008330DC /* Accelerate.framework */; };
 		A97AFB0720BFD901008330DC /* general.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB0520BFD901008330DC /* general.cpp */; };
-		A97AFB0820BFD901008330DC /* general.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A97AFB0620BFD901008330DC /* general.hpp */; };
+		A97AFB0820BFD901008330DC /* general.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A97AFB0620BFD901008330DC /* general.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		A97AFB0B20BFD976008330DC /* face.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB0920BFD976008330DC /* face.cpp */; };
-		A97AFB0C20BFD976008330DC /* face.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A97AFB0A20BFD976008330DC /* face.hpp */; };
+		A97AFB0C20BFD976008330DC /* face.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A97AFB0A20BFD976008330DC /* face.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		A97AFB0E20BFDDAB008330DC /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFB0D20BFDDAA008330DC /* CoreImage.framework */; };
 		A97AFB1320BFED3D008330DC /* shape_predictor_68_face_landmarks.xml in Resources */ = {isa = PBXBuildFile; fileRef = A97AFB1020BFED3D008330DC /* shape_predictor_68_face_landmarks.xml */; };
 		A97AFB1420BFED3D008330DC /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */; };
-		A97AFB1520BFED3D008330DC /* OpenFace.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1220BFED3D008330DC /* OpenFace.mlmodel */; };
+		A97AFB1520BFED3D008330DC /* OpenFace__.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1220BFED3D008330DC /* OpenFace__.mlmodel */; };
 		A97AFB1720C01A05008330DC /* CVUtilsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */; };
 		A9B903E420C6C44A0000C7D5 /* SFaceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E320C6C44A0000C7D5 /* SFaceError.swift */; };
 		A9B903E720C6CC1E0000C7D5 /* CIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E620C6CC1E0000C7D5 /* CIImage+.swift */; };
@@ -60,10 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40D23E1B20B98B24002E6479 /* SFaceCompare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFaceCompare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		40D23E1E20B98B24002E6479 /* SFaceCompare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFaceCompare.h; sourceTree = "<group>"; };
+		40D23E1B20B98B24002E6479 /* SameFace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SameFace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40D23E1E20B98B24002E6479 /* SameFace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SameFace.h; sourceTree = "<group>"; };
 		40D23E1F20B98B24002E6479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40D23E2420B98B24002E6479 /* SFaceCompareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFaceCompareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40D23E2420B98B24002E6479 /* SameFaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SameFaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D23E2920B98B24002E6479 /* FaceComparingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceComparingTests.swift; sourceTree = "<group>"; };
 		40D23E2B20B98B24002E6479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40D6298B20C4245F009855CE /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		A97AFB0D20BFDDAA008330DC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		A97AFB1020BFED3D008330DC /* shape_predictor_68_face_landmarks.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = shape_predictor_68_face_landmarks.xml; sourceTree = "<group>"; };
 		A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
-		A97AFB1220BFED3D008330DC /* OpenFace.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = OpenFace.mlmodel; sourceTree = "<group>"; };
+		A97AFB1220BFED3D008330DC /* OpenFace__.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = OpenFace__.mlmodel; sourceTree = "<group>"; };
 		A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVUtilsInterface.swift; sourceTree = "<group>"; };
 		A9B903E320C6C44A0000C7D5 /* SFaceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFaceError.swift; sourceTree = "<group>"; };
 		A9B903E620C6CC1E0000C7D5 /* CIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+.swift"; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40D23E2520B98B24002E6479 /* SFaceCompare.framework in Frameworks */,
+				40D23E2520B98B24002E6479 /* SameFace.framework in Frameworks */,
 				BE94153BC88049A7C56675D3 /* Pods_SFaceCompareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A90E321220C5591100ACF217 /* SFaceCompare.framework in Frameworks */,
+				A90E321220C5591100ACF217 /* SameFace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,8 +159,8 @@
 			children = (
 				A97AFB0020BFD3DB008330DC /* source.cpp */,
 				A97AFAE820BFBB50008330DC /* lib */,
-				40D23E1D20B98B24002E6479 /* SFaceCompare */,
-				40D23E2820B98B24002E6479 /* SFaceCompareTests */,
+				40D23E1D20B98B24002E6479 /* SameFace */,
+				40D23E2820B98B24002E6479 /* SameFaceTests */,
 				A90E31FB20C5152600ACF217 /* Example */,
 				40D23E1C20B98B24002E6479 /* Products */,
 				98A347AD45C0DEC6C7CC377B /* Pods */,
@@ -171,14 +171,14 @@
 		40D23E1C20B98B24002E6479 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				40D23E1B20B98B24002E6479 /* SFaceCompare.framework */,
-				40D23E2420B98B24002E6479 /* SFaceCompareTests.xctest */,
+				40D23E1B20B98B24002E6479 /* SameFace.framework */,
+				40D23E2420B98B24002E6479 /* SameFaceTests.xctest */,
 				A90E31FA20C5152500ACF217 /* SFaceExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		40D23E1D20B98B24002E6479 /* SFaceCompare */ = {
+		40D23E1D20B98B24002E6479 /* SameFace */ = {
 			isa = PBXGroup;
 			children = (
 				A9B903ED20C6E1E20000C7D5 /* Resources */,
@@ -188,17 +188,17 @@
 				A9B903E820C6CC2C0000C7D5 /* DetectionOperation */,
 				A90E321320C69A6400ACF217 /* SFaceCompare.swift */,
 			);
-			path = SFaceCompare;
+			path = SameFace;
 			sourceTree = "<group>";
 		};
-		40D23E2820B98B24002E6479 /* SFaceCompareTests */ = {
+		40D23E2820B98B24002E6479 /* SameFaceTests */ = {
 			isa = PBXGroup;
 			children = (
 				40D23E2920B98B24002E6479 /* FaceComparingTests.swift */,
 				40D23E2B20B98B24002E6479 /* Info.plist */,
 				A90E320D20C51DC100ACF217 /* TestAssets.xcassets */,
 			);
-			path = SFaceCompareTests;
+			path = SameFaceTests;
 			sourceTree = "<group>";
 		};
 		40D6299A20C48689009855CE /* Extensions */ = {
@@ -292,7 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */,
-				A97AFB1220BFED3D008330DC /* OpenFace.mlmodel */,
+				A97AFB1220BFED3D008330DC /* OpenFace__.mlmodel */,
 				A97AFB1020BFED3D008330DC /* shape_predictor_68_face_landmarks.xml */,
 			);
 			path = ml_models;
@@ -320,7 +320,7 @@
 		A9B903ED20C6E1E20000C7D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				40D23E1E20B98B24002E6479 /* SFaceCompare.h */,
+				40D23E1E20B98B24002E6479 /* SameFace.h */,
 				40D23E1F20B98B24002E6479 /* Info.plist */,
 			);
 			path = Resources;
@@ -335,7 +335,7 @@
 			files = (
 				40D6299020C42AC0009855CE /* UIImage_CVMat.h in Headers */,
 				40D6298F20C42ABE009855CE /* CIImage_CVMat.h in Headers */,
-				40D23E2C20B98B24002E6479 /* SFaceCompare.h in Headers */,
+				40D23E2C20B98B24002E6479 /* SameFace.h in Headers */,
 				A97AFB0C20BFD976008330DC /* face.hpp in Headers */,
 				A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */,
 				A97AFB0820BFD901008330DC /* general.hpp in Headers */,
@@ -345,9 +345,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		40D23E1A20B98B24002E6479 /* SFaceCompare */ = {
+		40D23E1A20B98B24002E6479 /* SameFace */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40D23E2F20B98B24002E6479 /* Build configuration list for PBXNativeTarget "SFaceCompare" */;
+			buildConfigurationList = 40D23E2F20B98B24002E6479 /* Build configuration list for PBXNativeTarget "SameFace" */;
 			buildPhases = (
 				132ACD5A0C0D52FAE9AA724E /* [CP] Check Pods Manifest.lock */,
 				40D23E1620B98B24002E6479 /* Sources */,
@@ -359,14 +359,14 @@
 			);
 			dependencies = (
 			);
-			name = SFaceCompare;
+			name = SameFace;
 			productName = SFaceCompare;
-			productReference = 40D23E1B20B98B24002E6479 /* SFaceCompare.framework */;
+			productReference = 40D23E1B20B98B24002E6479 /* SameFace.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		40D23E2320B98B24002E6479 /* SFaceCompareTests */ = {
+		40D23E2320B98B24002E6479 /* SameFaceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40D23E3220B98B24002E6479 /* Build configuration list for PBXNativeTarget "SFaceCompareTests" */;
+			buildConfigurationList = 40D23E3220B98B24002E6479 /* Build configuration list for PBXNativeTarget "SameFaceTests" */;
 			buildPhases = (
 				5186FE6A8BB74D03E96DB848 /* [CP] Check Pods Manifest.lock */,
 				40D23E2020B98B24002E6479 /* Sources */,
@@ -378,9 +378,9 @@
 			dependencies = (
 				40D23E2720B98B24002E6479 /* PBXTargetDependency */,
 			);
-			name = SFaceCompareTests;
+			name = SameFaceTests;
 			productName = SFaceCompareTests;
-			productReference = 40D23E2420B98B24002E6479 /* SFaceCompareTests.xctest */;
+			productReference = 40D23E2420B98B24002E6479 /* SameFaceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A90E31F920C5152500ACF217 /* SFaceExample */ = {
@@ -422,7 +422,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 40D23E1520B98B24002E6479 /* Build configuration list for PBXProject "SFaceCompare" */;
+			buildConfigurationList = 40D23E1520B98B24002E6479 /* Build configuration list for PBXProject "SameFace" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -435,8 +435,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				40D23E1A20B98B24002E6479 /* SFaceCompare */,
-				40D23E2320B98B24002E6479 /* SFaceCompareTests */,
+				40D23E1A20B98B24002E6479 /* SameFace */,
+				40D23E2320B98B24002E6479 /* SameFaceTests */,
 				A90E31F920C5152500ACF217 /* SFaceExample */,
 			);
 		};
@@ -531,7 +531,7 @@
 				A9B903EA20C6CC390000C7D5 /* BaseDetectionProcessOperation.swift in Sources */,
 				A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */,
 				40D6299520C48577009855CE /* UIImage+.swift in Sources */,
-				A97AFB1520BFED3D008330DC /* OpenFace.mlmodel in Sources */,
+				A97AFB1520BFED3D008330DC /* OpenFace__.mlmodel in Sources */,
 				A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */,
 				A9B903E420C6C44A0000C7D5 /* SFaceError.swift in Sources */,
 			);
@@ -559,7 +559,7 @@
 /* Begin PBXTargetDependency section */
 		40D23E2720B98B24002E6479 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40D23E1A20B98B24002E6479 /* SFaceCompare */;
+			target = 40D23E1A20B98B24002E6479 /* SameFace */;
 			targetProxy = 40D23E2620B98B24002E6479 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -728,7 +728,7 @@
 				);
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
-				INFOPLIST_FILE = "$(SRCROOT)/SFaceCompare/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SameFace/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -743,7 +743,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompare;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SFaceCompare/CVUtils";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -776,7 +776,7 @@
 				);
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
-				INFOPLIST_FILE = "$(SRCROOT)/SFaceCompare/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SameFace/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -792,7 +792,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompare;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SFaceCompare/CVUtils";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -879,7 +879,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40D23E1520B98B24002E6479 /* Build configuration list for PBXProject "SFaceCompare" */ = {
+		40D23E1520B98B24002E6479 /* Build configuration list for PBXProject "SameFace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40D23E2D20B98B24002E6479 /* Debug */,
@@ -888,7 +888,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40D23E2F20B98B24002E6479 /* Build configuration list for PBXNativeTarget "SFaceCompare" */ = {
+		40D23E2F20B98B24002E6479 /* Build configuration list for PBXNativeTarget "SameFace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40D23E3020B98B24002E6479 /* Debug */,
@@ -897,7 +897,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40D23E3220B98B24002E6479 /* Build configuration list for PBXNativeTarget "SFaceCompareTests" */ = {
+		40D23E3220B98B24002E6479 /* Build configuration list for PBXNativeTarget "SameFaceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40D23E3320B98B24002E6479 /* Debug */,

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SFaceCompare
+import SameFace
 
 final class ViewController: UIViewController {
   

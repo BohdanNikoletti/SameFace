@@ -6,7 +6,6 @@
 //  Copyright © 2018 Bohdan Mihiliev. All rights reserved.
 //
 
-import PrivateOpenCVModule
 import Vision
 
 public struct CVUtilsInterface {
@@ -29,7 +28,7 @@ public struct CVUtilsInterface {
          return false
     }
     do {
-      let net = OpenFace()
+      let net = OpenFace__()
       guard let firstPixelBuffer = firstAlignedFace.cvPixelBuffer,
         let secondPixelBuffer = secondAlignedFace.cvPixelBuffer else {
           return false

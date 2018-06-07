@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SFaceCompare
+import SameFace
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {

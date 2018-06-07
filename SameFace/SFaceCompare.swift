@@ -6,7 +6,6 @@
 //  Copyright © 2018 Bohdan Mihiliev. All rights reserved.
 //
 
-import PrivateOpenCVModule
 import Vision
 
 public class SFaceCompare {
@@ -80,7 +79,7 @@ public class SFaceCompare {
           return
       }
       do {
-        let net = OpenFace()
+        let net = OpenFace__()
         guard let firstPixelBuffer = firstAlignedFace.cvPixelBuffer,
           let secondPixelBuffer = secondAlignedFace.cvPixelBuffer else {
             DispatchQueue.main.async {
