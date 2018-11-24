@@ -2,7 +2,7 @@
 //  FaceDetection.swift
 //  SFaceCompare
 //
-//  Created by Soft Project on 6/4/18.
+//  Created by Bohdan Mihiliev on 6/4/18.
 //  Copyright © 2018 Bohdan Mihiliev. All rights reserved.
 //
 import Vision
