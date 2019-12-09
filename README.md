@@ -10,8 +10,8 @@ Trained model is a transformed [OpenFace](https://cmusatyalab.github.io/openface
 3) Archive project
 4) After arhive finished finder opens directory with universal framework
 ### Important notes
-** 4th step takes some time after archive finished
-** All code of universal framewrok build is located in Edit Scheme -> Archive -> Post Actions -> Run Script
+* 4th step takes some time after archive finished
+* All code of universal framewrok build is located in Edit Scheme -> Archive -> Post Actions -> Run Script
 
 ## Credits
 
