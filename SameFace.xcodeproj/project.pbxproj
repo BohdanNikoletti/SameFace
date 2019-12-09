@@ -56,6 +56,13 @@
 			remoteGlobalIDString = 40D23E1A20B98B24002E6479;
 			remoteInfo = SFaceCompare;
 		};
+		78D24007226C88970017419F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40D23E1220B98B24002E6479 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A90E31F920C5152500ACF217;
+			remoteInfo = SFaceExample;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -368,6 +375,7 @@
 			);
 			dependencies = (
 				40D23E2720B98B24002E6479 /* PBXTargetDependency */,
+				78D24008226C88970017419F /* PBXTargetDependency */,
 			);
 			name = SameFaceTests;
 			productName = SFaceCompareTests;
@@ -403,13 +411,15 @@
 				TargetAttributes = {
 					40D23E1A20B98B24002E6479 = {
 						CreatedOnToolsVersion = 9.3.1;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1020;
 					};
 					40D23E2320B98B24002E6479 = {
 						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = A90E31F920C5152500ACF217;
 					};
 					A90E31F920C5152500ACF217 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -534,6 +544,11 @@
 			isa = PBXTargetDependency;
 			target = 40D23E1A20B98B24002E6479 /* SameFace */;
 			targetProxy = 40D23E2620B98B24002E6479 /* PBXContainerItemProxy */;
+		};
+		78D24008226C88970017419F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A90E31F920C5152500ACF217 /* SFaceExample */;
+			targetProxy = 78D24007226C88970017419F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -681,6 +696,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B204880B8F8143E68D82ABFF /* Pods-SameFace.debug.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
@@ -721,7 +737,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -731,6 +747,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 043B717375AC04A1F56E0981 /* Pods-SameFace.release.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
@@ -771,7 +788,7 @@
 				SKIP_INSTALL = NO;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -781,9 +798,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49UXR3JGK2;
-				INFOPLIST_FILE = SFaceCompareTests/Info.plist;
+				INFOPLIST_FILE = SameFaceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -791,8 +810,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFaceExample.app/SFaceExample";
 			};
 			name = Debug;
 		};
@@ -800,9 +821,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49UXR3JGK2;
-				INFOPLIST_FILE = SFaceCompareTests/Info.plist;
+				INFOPLIST_FILE = SameFaceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -810,8 +833,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFaceExample.app/SFaceExample";
 			};
 			name = Release;
 		};
@@ -828,7 +853,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -846,7 +871,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

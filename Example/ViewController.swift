@@ -48,7 +48,7 @@ final class ViewController: UIViewController {
     super.didReceiveMemoryWarning()
   }
   
-  override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+  override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
     if motion == .motionShake  {
       setDegaultViewsStates()
     }
@@ -87,8 +87,11 @@ final class ViewController: UIViewController {
 extension ViewController: UIImagePickerControllerDelegate {
   
   func imagePickerController(_ picker: UIImagePickerController,
-                             didFinishPickingMediaWithInfo info: [String : Any]) {
-    guard let selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+                             didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+    guard let selectedPhoto = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage else {
       return
     }
     dismiss(animated: true, completion: { [unowned self, selectedPhoto] in
@@ -143,4 +146,14 @@ extension ViewController: UIImagePickerControllerDelegate {
 // MARK: - UINavigationControllerDelegate
 extension ViewController: UINavigationControllerDelegate {
   
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

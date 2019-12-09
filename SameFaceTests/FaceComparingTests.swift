@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SFaceCompare
+@testable import SameFace
 
 struct ImagesResources {
   private static let bundle = Bundle(for: FaceComparingTests.self)
