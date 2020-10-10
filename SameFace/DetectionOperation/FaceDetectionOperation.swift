@@ -6,6 +6,7 @@
 //  Copyright © 2018 Bohdan Mihiliev. All rights reserved.
 //
 import Vision
+import SameFace
 
 final class FaceDetectionOperation: BaseDetectionProcessOperation<VNDetectFaceRectanglesRequest> {
   
@@ -16,14 +17,14 @@ final class FaceDetectionOperation: BaseDetectionProcessOperation<VNDetectFaceRe
     do {
       try vNImageRequestHandler.perform([recognitionRequest])
     } catch {
-      Logger.e("Wrong Face Results count: \(error.localizedDescription)")
+      debugPrint("Wrong Face Results count: \(error.localizedDescription)")
     }
   }
   
   // MARK: - BaseDetectionProcessOperation methods
   override func recognitionHandler(request: VNRequest, error: Error?) {
     if let error = error {
-      Logger.e("\(error.localizedDescription)")
+      debugPrint("\(error.localizedDescription)")
       return
     }
     
@@ -34,7 +35,7 @@ final class FaceDetectionOperation: BaseDetectionProcessOperation<VNDetectFaceRe
     // Need check results only if objectsCountToDetect isn't default
     if objectsCountToDetect != 0 {
       guard results.count == objectsCountToDetect else {
-        Logger.e("Wrong Face Results count: Founded - \(results.count) | Required - \(objectsCountToDetect)")
+        debugPrint("Wrong Face Results count: Founded - \(results.count) | Required - \(objectsCountToDetect)")
         return
       }
     }

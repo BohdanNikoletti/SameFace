@@ -7,6 +7,8 @@
 //
 
 import Vision
+import UIKit
+import SameFace
 
 public struct CVUtilsInterface {
   
@@ -46,7 +48,7 @@ public struct CVUtilsInterface {
       print(result)
       return result < 1.0
     } catch {
-      Logger.e(error.localizedDescription)
+      debugPrint(error.localizedDescription)
       return false
     }
   }

@@ -30,14 +30,14 @@
   CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), self.CGImage);
   CGContextRelease(contextRef);
   
-  cv::cvtColor(cvMat, cvMat, CV_RGBA2BGRA);
+  cv::cvtColor(cvMat, cvMat, cv::COLOR_RGBA2BGRA);
   return cvMat;
 }
 
 - (cv::Mat)CVMat3
 {
   cv::Mat result = [self CVMat];
-  cv::cvtColor(result, result, CV_BGRA2BGR);
+  cv::cvtColor(result, result, cv::COLOR_BGRA2BGR);
   return result;
   
 }

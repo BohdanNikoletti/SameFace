@@ -7,6 +7,7 @@
 //
 
 import Vision
+import SameFace
 
 public class SFaceCompare {
 
@@ -34,13 +35,13 @@ public class SFaceCompare {
     
     guard let firstFaceDetectionOperation = FaceDetectionOperation(input: firstImage, objectsCountToDetect: 1,
                                                                    orientation: CGImagePropertyOrientation.up) else {
-                                                                    Logger.e("Can not instantiate face detection for photoOfDidinaID of type UIImage")
+      debugPrint("Can not instantiate face detection for photoOfDidinaID of type UIImage")
                                                                     return //false
     }
     
     guard let secondFaceDetectionOperation = FaceDetectionOperation(input: secondImage, objectsCountToDetect: 1,
                                                                     orientation: CGImagePropertyOrientation.up) else {
-                                                                      Logger.e("Can not instantiate face detection for photoOfDidinaID of type UIImage")
+      debugPrint("Can not instantiate face detection for photoOfDidinaID of type UIImage")
                                                                       return //false
     }
     
@@ -111,7 +112,7 @@ public class SFaceCompare {
           }
         }
       } catch {
-        Logger.e(error.localizedDescription)
+        debugPrint(error.localizedDescription)
         DispatchQueue.main.async {
           failure(error)
         }

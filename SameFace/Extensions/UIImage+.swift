@@ -5,6 +5,7 @@
 //  Created by Bohdan Mihiliev on 03.06.2018.
 //  Copyright © 2018 Bohdan Mihiliev. All rights reserved.
 //
+import UIKit
 
 extension UIImage {
   var cvPixelBuffer: CVPixelBuffer? {

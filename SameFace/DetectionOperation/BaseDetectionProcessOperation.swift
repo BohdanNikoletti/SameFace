@@ -7,7 +7,8 @@
 //
 
 import Vision
-
+import UIKit
+import SameFace
 // Base class for all detection operations.
 class BaseDetectionProcessOperation<RequestType: VNRequest>: Operation {
   
@@ -58,7 +59,7 @@ class BaseDetectionProcessOperation<RequestType: VNRequest>: Operation {
     do {
       try vNImageRequestHandler.perform([recognitionRequest])
     } catch {
-      Logger.e("Wrong Face Results count: \(error.localizedDescription)")
+      debugPrint("Wrong Face Results count: \(error.localizedDescription)")
     }
   }
   

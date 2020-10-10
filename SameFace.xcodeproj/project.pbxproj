@@ -13,19 +13,26 @@
 		40D23E2C20B98B24002E6479 /* SameFace.h in Headers */ = {isa = PBXBuildFile; fileRef = 40D23E1E20B98B24002E6479 /* SameFace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40D6298F20C42ABE009855CE /* CIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFC20BFCF86008330DC /* CIImage_CVMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40D6299020C42AC0009855CE /* UIImage_CVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAFD20BFD012008330DC /* UIImage_CVMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40D6299320C48550009855CE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299220C48550009855CE /* Logger.swift */; };
-		40D6299520C48577009855CE /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299420C48577009855CE /* UIImage+.swift */; };
-		40D6299720C48632009855CE /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299620C48632009855CE /* Date+.swift */; };
-		40D6299920C48652009855CE /* Formatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299820C48652009855CE /* Formatter+.swift */; };
+		78471DB5253261BF00507810 /* SFaceCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E321320C69A6400ACF217 /* SFaceCompare.swift */; };
+		78471DBC253261C800507810 /* Formatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299820C48652009855CE /* Formatter+.swift */; };
+		78471DC0253261CB00507810 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299620C48632009855CE /* Date+.swift */; };
+		78471DC4253261D300507810 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299220C48550009855CE /* Logger.swift */; };
+		78471DCB2532621800507810 /* CIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E620C6CC1E0000C7D5 /* CIImage+.swift */; };
+		78471DD22532622800507810 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6299420C48577009855CE /* UIImage+.swift */; };
+		78471DD62532624F00507810 /* CVUtilsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */; };
+		78471DE22532630400507810 /* OpenFace__.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1220BFED3D008330DC /* OpenFace__.mlmodel */; };
+		78471DE92532632A00507810 /* FaceDetectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E321020C5316F00ACF217 /* FaceDetectionOperation.swift */; };
+		78471DF02532636400507810 /* BaseDetectionProcessOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E920C6CC390000C7D5 /* BaseDetectionProcessOperation.swift */; };
+		78471DF7253263A100507810 /* DetectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903EB20C6CC620000C7D5 /* DetectionResult.swift */; };
+		78D7045A2531DCAC00430DC6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D704592531DCAC00430DC6 /* AVFoundation.framework */; };
+		78D704612531DCEF00430DC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D704602531DCEF00430DC6 /* UIKit.framework */; };
 		A90E31FD20C5152600ACF217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E31FC20C5152600ACF217 /* AppDelegate.swift */; };
 		A90E31FF20C5152600ACF217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E31FE20C5152600ACF217 /* ViewController.swift */; };
 		A90E320220C5152600ACF217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90E320020C5152600ACF217 /* Main.storyboard */; };
 		A90E320420C5152600ACF217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90E320320C5152600ACF217 /* Assets.xcassets */; };
 		A90E320720C5152600ACF217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90E320520C5152600ACF217 /* LaunchScreen.storyboard */; };
 		A90E320E20C51DC100ACF217 /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90E320D20C51DC100ACF217 /* TestAssets.xcassets */; };
-		A90E321120C5316F00ACF217 /* FaceDetectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E321020C5316F00ACF217 /* FaceDetectionOperation.swift */; };
 		A90E321220C5591100ACF217 /* SameFace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D23E1B20B98B24002E6479 /* SameFace.framework */; };
-		A90E321420C69A6400ACF217 /* SFaceCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E321320C69A6400ACF217 /* SFaceCompare.swift */; };
 		A97AFAEA20BFBBA4008330DC /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFAE920BFBBA4008330DC /* libdlib.a */; };
 		A97AFAF320BFC007008330DC /* OpenCVWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A97AFAF120BFC007008330DC /* OpenCVWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A97AFAF220BFC007008330DC /* OpenCVWrapper.mm */; };
@@ -40,12 +47,7 @@
 		A97AFB0E20BFDDAB008330DC /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AFB0D20BFDDAA008330DC /* CoreImage.framework */; };
 		A97AFB1320BFED3D008330DC /* shape_predictor_68_face_landmarks.xml in Resources */ = {isa = PBXBuildFile; fileRef = A97AFB1020BFED3D008330DC /* shape_predictor_68_face_landmarks.xml */; };
 		A97AFB1420BFED3D008330DC /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = A97AFB1120BFED3D008330DC /* haarcascade_frontalface_alt.xml */; };
-		A97AFB1520BFED3D008330DC /* OpenFace__.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1220BFED3D008330DC /* OpenFace__.mlmodel */; };
-		A97AFB1720C01A05008330DC /* CVUtilsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97AFB1620C01A05008330DC /* CVUtilsInterface.swift */; };
 		A9B903E420C6C44A0000C7D5 /* SFaceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E320C6C44A0000C7D5 /* SFaceError.swift */; };
-		A9B903E720C6CC1E0000C7D5 /* CIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E620C6CC1E0000C7D5 /* CIImage+.swift */; };
-		A9B903EA20C6CC390000C7D5 /* BaseDetectionProcessOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903E920C6CC390000C7D5 /* BaseDetectionProcessOperation.swift */; };
-		A9B903EC20C6CC620000C7D5 /* DetectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B903EB20C6CC620000C7D5 /* DetectionResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		40D6299420C48577009855CE /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		40D6299620C48632009855CE /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		40D6299820C48652009855CE /* Formatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+.swift"; sourceTree = "<group>"; };
+		78D704592531DCAC00430DC6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		78D704602531DCEF00430DC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		84B8BED3B4B4F0638976B568 /* Pods_SameFace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SameFace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90E31FA20C5152500ACF217 /* SFaceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFaceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90E31FC20C5152600ACF217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +124,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97AFB0E20BFDDAB008330DC /* CoreImage.framework in Frameworks */,
+				78D704612531DCEF00430DC6 /* UIKit.framework in Frameworks */,
 				A97AFB0320BFD4FF008330DC /* Accelerate.framework in Frameworks */,
+				78D7045A2531DCAC00430DC6 /* AVFoundation.framework in Frameworks */,
 				A97AFAEA20BFBBA4008330DC /* libdlib.a in Frameworks */,
 				133B73D01DBF93917F24D7F7 /* Pods_SameFace.framework in Frameworks */,
 			);
@@ -148,6 +154,8 @@
 		3E630ED4602C616234AC8A01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78D704602531DCEF00430DC6 /* UIKit.framework */,
+				78D704592531DCAC00430DC6 /* AVFoundation.framework */,
 				A97AFB0D20BFDDAA008330DC /* CoreImage.framework */,
 				A97AFB0220BFD4FE008330DC /* Accelerate.framework */,
 				84B8BED3B4B4F0638976B568 /* Pods_SameFace.framework */,
@@ -499,22 +507,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40D6299720C48632009855CE /* Date+.swift in Sources */,
 				A97AFB0720BFD901008330DC /* general.cpp in Sources */,
-				40D6299920C48652009855CE /* Formatter+.swift in Sources */,
-				A9B903E720C6CC1E0000C7D5 /* CIImage+.swift in Sources */,
 				A97AFB0120BFD3DB008330DC /* source.cpp in Sources */,
 				A97AFB0B20BFD976008330DC /* face.cpp in Sources */,
 				A97AFAFF20BFD01E008330DC /* UIImage_CVMat.mm in Sources */,
-				A9B903EC20C6CC620000C7D5 /* DetectionResult.swift in Sources */,
-				40D6299320C48550009855CE /* Logger.swift in Sources */,
-				A97AFB1720C01A05008330DC /* CVUtilsInterface.swift in Sources */,
-				A90E321420C69A6400ACF217 /* SFaceCompare.swift in Sources */,
-				A90E321120C5316F00ACF217 /* FaceDetectionOperation.swift in Sources */,
-				A9B903EA20C6CC390000C7D5 /* BaseDetectionProcessOperation.swift in Sources */,
 				A97AFAF420BFC007008330DC /* OpenCVWrapper.mm in Sources */,
-				40D6299520C48577009855CE /* UIImage+.swift in Sources */,
-				A97AFB1520BFED3D008330DC /* OpenFace__.mlmodel in Sources */,
+				78471DCB2532621800507810 /* CIImage+.swift in Sources */,
 				A97AFAFB20BFCF72008330DC /* CIImage_CVMat.mm in Sources */,
 				A9B903E420C6C44A0000C7D5 /* SFaceError.swift in Sources */,
 			);
@@ -532,7 +530,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78471DE92532632A00507810 /* FaceDetectionOperation.swift in Sources */,
+				78471DB5253261BF00507810 /* SFaceCompare.swift in Sources */,
+				78471DD22532622800507810 /* UIImage+.swift in Sources */,
+				78471DC4253261D300507810 /* Logger.swift in Sources */,
 				A90E31FF20C5152600ACF217 /* ViewController.swift in Sources */,
+				78471DF02532636400507810 /* BaseDetectionProcessOperation.swift in Sources */,
+				78471DF7253263A100507810 /* DetectionResult.swift in Sources */,
+				78471DE22532630400507810 /* OpenFace__.mlmodel in Sources */,
+				78471DD62532624F00507810 /* CVUtilsInterface.swift in Sources */,
+				78471DC0253261CB00507810 /* Date+.swift in Sources */,
+				78471DBC253261C800507810 /* Formatter+.swift in Sources */,
 				A90E31FD20C5152600ACF217 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -681,7 +689,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -720,7 +728,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				INFOPLIST_FILE = "$(SRCROOT)/SameFace/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -734,12 +742,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "x86_64 arm64 armv7 armv7s arm64e";
 			};
 			name = Debug;
 		};
@@ -771,7 +780,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				INFOPLIST_FILE = "$(SRCROOT)/SameFace/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -781,16 +790,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
 				);
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.geekowl.SFaceCompare;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "x86_64 arm64 armv7 armv7s arm64e";
 			};
 			name = Release;
 		};
