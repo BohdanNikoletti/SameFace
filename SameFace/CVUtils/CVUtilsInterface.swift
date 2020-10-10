@@ -45,6 +45,7 @@ public struct CVUtilsInterface {
         result += (Double(truncating: firstOutput[idx]) - Double(truncating: secondOutput[idx]))
           * (Double(truncating: firstOutput[idx]) - Double(truncating: secondOutput[idx]))
       }
+      result = result.squareRoot()
       print(result)
       return result < 1.0
     } catch {
